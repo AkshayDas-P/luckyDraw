@@ -6,7 +6,12 @@
     height: 100vh;
     background: url('Images/base.png') no-repeat center bottom;
     background-size: contain;
-    background-color: #07011f;
+  }
+
+  #root {
+    background: url('Images/sitebg.png') no-repeat center top;
+    background-size: cover;
+    background-color: #15064e;
   }
 
   .count-box {
@@ -30,6 +35,8 @@
     margin-top: 20px;
     border: 1px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
   }
   
   /* //animation text// */
@@ -48,4 +55,23 @@
   background: url('Images/counter-bg.png') no-repeat center bottom;
   background-size: cover;
   padding-bottom: 30px;
+  position: relative;
+}
+#countBox:before {
+  content: '';
+  width: 140%;
+  height: 100%;
+  background: url('Images/count-bg.png') no-repeat center bottom;
+  background-size: cover;
+  padding-bottom: 30px;
+  position: relative;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+#countBox .count {
+  position: relative;
+  z-index: 9;
+  width: 30px;
 }
